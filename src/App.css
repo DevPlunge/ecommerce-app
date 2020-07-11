@@ -1,0 +1,301 @@
+/* CSS Boilerplate */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, input, span {
+  display: inline-block;
+}
+
+.container {
+  margin-top: 50px;
+  padding: 20px 0;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  max-width: 208px;
+  width: 100%;
+  min-height: 406px;
+  margin-bottom: 30px;
+  padding: 30px 20px 20px;
+  background: #ccc;
+  position: relative;
+}
+
+.product img {
+  max-width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.shipping {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 8px;
+  padding: 5px;
+  background: #333;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.total__products {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total__products span {
+  font-weight: bold;
+}
+
+.total__products > p::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #333;
+}
+
+.product__sizes,
+.products__wrapper {
+  display: inline-block;
+}
+
+.products__wrapper {
+  max-width: 700px;
+  width: 100%;
+  vertical-align: top;
+}
+
+.product__sizes {
+  max-width: 230px;
+  width: 100%;
+  vertical-align: top;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.size__checkbox {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 50%;
+  position: relative;
+  font-size: 12px;
+  margin: 0 0 20px 12px;
+}
+
+.size__checkbox > input {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+}
+
+.product__sizes .size__checkbox:nth-child(4n+1) {
+  margin-left: 0;
+}
+
+.size__checkbox label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.size__checkbox > input:checked + label {
+  border: 1px solid #000;
+  background: #fff;
+}
+
+.sort__select select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.cart__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: #ccc;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  background: #ccc;
+  transform: translateX(100%);
+  transition: all .3s;
+}
+
+.cart.active {
+  transform: translateX(0);
+}
+
+.cart__items {
+  height: 80%;
+  overflow-y: auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.cart__item {
+  margin-bottom: 20px;
+  background: #fff;
+  min-height: 71px;
+  padding: 10px;
+}
+
+.cart__item img {
+  float: left;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.cart__subtotal {
+  padding: 20px;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.button:hover {
+  opacity: .7;
+}
+
+.close__cart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.close__cart::before,
+.close__cart::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: #fff;
+  transform: rotateZ(45deg);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.close__cart::after {
+  transform: rotate(-45deg);
+}
+
+.empty-cart {
+  padding: 22px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: underline;
+}
+
+.cart__items::-webkit-scrollbar {
+  background: #fff;
+  width: 8px;
+}
+.cart__items::-webkit-scrollbar-track {
+  background: #fff;
+}
+.cart__items::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+.empty-cart-btn {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  display: block;
+  margin: 0 auto 20px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.empty-cart-btn:hover {
+  opacity: .8;
+}
